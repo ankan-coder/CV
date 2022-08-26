@@ -1,9 +1,12 @@
-hr {
-  border-color: grey;
-  border-style: none;
-  border-top-style: dotted;
-  border-width: 5px;
-  width: 5%;
+.container{
+  margin: auto; 
+  width: 80%; 
+  padding: 20px;
+  background-color: azure;
+}
+
+.cont{
+  margin-bottom: 5%;
 }
 
 .hd{
