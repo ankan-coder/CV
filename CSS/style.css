@@ -5,6 +5,10 @@
   background-color: #f0ffff;
 }
 
+html{
+  font-family: 'Dancing Script', cursive;  display: flex; 
+}
+
 .cont{
   margin-bottom: 5%;
 }
@@ -26,12 +30,20 @@
 }
 
 .bd{
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 20px; 
   display: flex; 
   margin-top: 5px; 
   text-align: center; 
+  justify-content: center;
+}
+
+.dsbd{
   font-family: 'Barlow Condensed', sans-serif;
-  display: flex;
+  font-size: 20px; 
+  display: flex; 
+  /* margin-top: ;  */
+  text-align: center; 
   justify-content: center;
 }
 
