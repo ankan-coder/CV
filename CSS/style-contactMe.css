@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #081b29;
+  color: #ededed;
+  display: flex;
+  user-select: none;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #00abf0;
+}
+
+.logo {
+  font-size: 20px;
+  color: #ededed;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  margin-right: 0;
+  margin-left: auto;
+  user-select: none;
+  max-width: fit-content;
+}
+
+.container .info {
+  width: 800px;
+  margin-right: 20px;
+}
+
+.heading {
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  padding: 15px;
+  font-weight: bolder;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.home-icon {
+  border-radius: 50%;
+  border: 2px solid black;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+img {
+  height: 35px;
+  width: 35px;
+}
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: center;
+  height: 450px;
+  width: 800px;
+  padding: 25px;
+  font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: rgb(247, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.textarea-wrapper {
+  position: relative;
+}
+
+input {
+  box-sizing: border-box;
+  outline: none;
+  width: 520px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-family: "Kalam", cursive;
+    transition: 0.1s;
+    overflow: hidden;
+}
+
+input:focus{
+    border: 3px solid #00abf0;
+}
+
+label {
+  position: absolute;
+  top: -35px;
+  left: 10px;
+  height: 100%;
+  line-height: 50px;
+  font-size: 14px;
+  color: #00abf0;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  width: 520px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-family: "Kalam", cursive;
+  border-bottom: 2px solid gray;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  transition: 0.1s;
+  overflow: hidden;
+}
+
+textarea:focus{
+    border: 3px solid #00abf0;
+}
+
+
+button {
+  border: none;
+  background-color: #fd6585; /* Pink */
+  box-shadow: 0 4px #fd6585;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 520px;
+  font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+#input-msg {
+  height: 250px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 0;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.photo img {
+  height: 480px;
+  border-radius: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 520px;
+  height: 50px;
+}
+
+.btn-box a {
+  width: 150px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #081b29;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.8s;
+}
+
+.btn-box a:hover {
+  background-color: #081b29;
+  color: #00abf0;
+}
+
+.container .info{
+    display: block;
+    justify-content: space-between;
+    line-height: 80px;
+    max-width: 650px;
+}
+
+.container .info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container .info h3{
+    font-size: 30px;
+    display: flex;
+}
+
+.container .info h3 .icon{
+    border: 2px solid #00abf0;
+    height: 50px;
+    border-radius: 50%;
+    width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.container .info h3 a{
+    text-decoration: none;
+    color: #ededed;
+}
+
