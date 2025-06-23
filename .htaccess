@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle client-side routing for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/(home|portfolio|contact)/?$
+RewriteRule ^home/?$ index.html [L,QSA]
+RewriteRule ^portfolio/?$ portfolio.html [L,QSA]
+RewriteRule ^contact/?$ contactMe.html [L,QSA]
+
+# Optional: Redirect root to /home
+RewriteRule ^$ /home [R=302,L]
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>

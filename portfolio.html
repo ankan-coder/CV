@@ -1,551 +1,1303 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <title>Ankan.</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+    <title>Student Portfolio - Computer Science</title>
+
+    <!-- External Libraries -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
-        .timeline-with-icons-left {
-            border-left: 1px solid hsl(0, 0%, 90%);
-            position: relative;
-            list-style: none;
-            max-width: 75%;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #ffffff;
+        background: #081b29;
+        overflow-x: hidden;
+      }
+
+      /* Background Animation */
+      .bg-animation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.1;
+      }
+
+      .bg-animation::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        animation: moveGrid 20s linear infinite;
+      }
+
+      @keyframes moveGrid {
+        0% {
+          transform: translateX(0) translateY(0);
+        }
+        100% {
+          transform: translateX(10px) translateY(10px);
+        }
+      } /* Navigation */
+      .navbar {
+        background: rgba(8, 27, 41, 0.9) !important;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #00abf0 !important;
+      }
+
+      .navbar-nav .nav-link {
+        color: #ffffff !important;
+        font-weight: 500;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background: #00abf0;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .navbar-nav .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #00abf0 !important;
+      } /* Hero Section */
+      .hero-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: #081b29;
+        text-align: center;
+      }
+
+      .hero-section .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-section .row {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #00abf0 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease;
+      }
+
+      .hero-content .subtitle {
+        font-size: 1.5rem;
+        color: #b3b3b3;
+        margin-bottom: 2rem;
+        animation: fadeInUp 1s ease 0.2s both;
+      }
+
+      .hero-content .description {
+        font-size: 1.1rem;
+        color: #888;
+        margin-bottom: 3rem;
+        animation: fadeInUp 1s ease 0.4s both;
+      }
+
+      .cta-buttons {
+        animation: fadeInUp 1s ease 0.6s both;
+      }
+      .btn-primary-custom {
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        border: none;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 171, 240, 0.3);
+      }
+
+      .btn-primary-custom:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 171, 240, 0.4);
+        color: white;
+      }
+
+      .btn-outline-custom {
+        border: 2px solid #00abf0;
+        color: #00abf0;
+        padding: 10px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-custom:hover {
+        background: #00abf0;
+        color: #081b29;
+        transform: translateY(-3px);
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 100px 0;
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-title h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+      }
+
+      .section-title p {
+        color: #b3b3b3;
+        font-size: 1.1rem;
+      }
+
+      /* Card Styles */
+      .custom-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        height: 100%;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+      }
+      .custom-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .custom-card:hover::before {
+        transform: translateX(0);
+      }
+      .custom-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(0, 171, 240, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .custom-card h3 {
+        color: #00abf0;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .custom-card .card-date {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .custom-card .card-subtitle {
+        color: #b3b3b3;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .custom-card p {
+        color: #ccc;
+        line-height: 1.6;
+      }
+
+      /* Skills Grid */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .skill-category {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+      .skill-category:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(0, 171, 240, 0.3);
+      }
+
+      .skill-category h4 {
+        color: #00abf0;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+
+      .skill-category .skills-list {
+        list-style: none;
+      }
+
+      .skill-category .skills-list li {
+        color: #ccc;
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
+      }
+      .skill-category .skills-list li:hover {
+        color: #00abf0;
+      }
+
+      /* Progress Bars */
+      .progress-custom {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        margin-top: 1rem;
+        overflow: hidden;
+      }
+      .progress-bar-custom {
+        height: 100%;
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        border-radius: 4px;
+        transition: width 2s ease;
+        position: relative;
+      }
+
+      .progress-bar-custom::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 35%,
+          rgba(255, 255, 255, 0.2) 50%,
+          transparent 65%
+        );
+        animation: shimmer 2s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1.5px;
+        border-radius: 2px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -12px;
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        border: 3px solid #081b29;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
+      }
+
+      .timeline-left {
+        left: 0;
+      }
+
+      .timeline-right {
+        left: 50%;
+      }
+
+      .timeline-right::after {
+        left: -12px;
+      }
+
+      .timeline-content {
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        position: relative;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Contact Section */
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem 2rem;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        text-align: center;
+        min-width: 200px;
+      }
+      .contact-item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-5px);
+        border-color: rgba(0, 171, 240, 0.3);
+      }
+
+      .contact-item i {
+        font-size: 2rem;
+        color: #00abf0;
+        margin-bottom: 1rem;
+      }
+
+      .contact-item a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .contact-item a:hover {
+        color: #00abf0;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
         }
 
-        .timeline-with-icons-left .timeline-item {
-            position: relative;
+        .hero-content .subtitle {
+          font-size: 1.2rem;
         }
 
-        .timeline-with-icons-left .timeline-item:after {
-            position: absolute;
-            display: block;
-            top: 0;
+        .section-title h2 {
+          font-size: 2.2rem;
         }
 
-        .timeline-with-icons-left .timeline-icon {
-            position: absolute;
-            left: -48px;
-            background-color: hsl(217, 88.2%, 90%);
-            color: hsl(217, 88.8%, 35.1%);
-            border-radius: 50%;
-            height: 31px;
-            width: 31px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .timeline::after {
+          left: 31px;
         }
 
-        .timeline-with-icons-right {
-            border-right: 1px solid hsl(0, 0%, 90%);
-            position: relative;
-            list-style: none;
-            max-width: 75%;
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
         }
 
-        .timeline-with-icons-right .timeline-item {
-            position: relative;
+        .timeline-item::after {
+          left: 15px;
         }
 
-        .timeline-with-icons-right .timeline-item:after {
-            position: absolute;
-            display: block;
-            top: 0;
+        .timeline-right {
+          left: 0%;
         }
 
-        .timeline-with-icons-right .timeline-icon {
-            position: absolute;
-            right: -15px;
-            background-color: hsl(217, 88.2%, 90%);
-            color: hsl(217, 88.8%, 35.1%);
-            border-radius: 50%;
-            height: 31px;
-            width: 31px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .skills-grid {
+          grid-template-columns: 1fr;
         }
+
+        .contact-info {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .cta-buttons {
+          text-align: center;
+        }
+
+        .btn-primary-custom,
+        .btn-outline-custom {
+          display: block;
+          margin: 10px auto;
+          width: fit-content;
+        }
+      } /* Scroll Progress Bar */
+      .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+        z-index: 9999;
+        transition: width 0.3s ease;
+      }
     </style>
-</head>
+  </head>
+  Z
+  <body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
 
-<body style="background: #081b29;">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <nav class="navbar navbar-expand-lg bg-transparent px-4">
-        <div class="container-fluid justify-content-between">
-            <a class="navbar-brand text-light fw-bold fs-3" href="./index.html">Ankan.</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-semibold fs-5 text-white" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Sections
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myEdu">My Education</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myCc">Certification Courses</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myTra">Trainings</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myPro">Projects</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myInt">Internships</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myJob">Job Experiences</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#mySki">Skills</a>
-                            </li>
-                            <li>
-                                <a class="fw-semibold fs-5 dropdown-item" href="#myLan">Languages known</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fw-semibold fs-5" href="./contactMe.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Ankan.</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">My Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certifications">Certifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#languages">Languages</a>
+            </li>            <li class="nav-item">
+              <a class="nav-link" href="./contactMe.html">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <!-- Portfolio Heading -->
-    <div class="container display-5 fw-semibold text-center text-white my-4">
-        My Portfolio
-    </div>
-
-    <div class="container-fluid p-3 d-flex flex-column px-5">
-
-
-        <!-- Education part -->
-        <div id="myEdu" class="p-3 my-2 ms-4">
-
-            <div class="fs-1 fw-semibold ms-4" style="color: #00abf0;">My Education</div>
-
-            <!-- Section: Timeline -->
-            <section class="py-5">
-                <ul class="timeline-with-icons-left">
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </span>
-
-                        <h5 class="fw-bold">B.Tech in Computer Science and Technology</h5>
-                        <p class="text-muted mb-2 fw-bold">Duration: 2022 to 2025</p>
-                        <p class="text-muted">
-                            BENGAL COLLEGE OF ENGINEERING AND TECHNOLOGY, DURGAPUR
-                        </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-
-                        <span class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </span>
-                        <h5 class="fw-bold">Diploma in Computer Science and Technology</h5>
-                        <p class="text-muted mb-2 fw-bold">Duration: 2019 to 2022</p>
-                        <p class="text-muted">
-                            DR. B.C. ROY POLYTECHNIC, DURGAPUR
-                        </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-
-                        <span class="timeline-icon">
-                            <i class="fas fa-school"></i>
-                        </span>
-                        <h5 class="fw-bold">Class XII-SCIENCE-CBSE</h5>
-                        <p class="text-muted mb-2 fw-bold">Duration: 2017 to 2019</p>
-                        <p class="text-muted">
-                            AMRITA VIDYALAYAM, DURGAPUR
-                        </p>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-
-                        <span class="timeline-icon">
-                            <i class="fas fa-school"></i>
-                        </span>
-                        <h5 class="fw-bold">CLASS X-CBSE</h5>
-                        <p class="text-muted mb-2 fw-bold">Duration: 2016 to 2017</p>
-                        <p class="text-muted">
-                            AMRITA VIDYALAYAM, DURGAPUR
-                        </p>
-                    </li>
-                </ul>
-            </section>
-            <!-- Section: Timeline -->
-        </div>
-
-
-        <!-- Certification Courses part -->
-        <div id="myCc" class="p-3 my-2 ms-auto text-end">
-
-            <div class="fs-1 fw-semibold me-4" style="color: #00abf0;">My Certification Courses</div>
-
-            <!-- Certification Courses Timeline Starts -->
-            <section class="pt-5">
-                <ul class="timeline-with-icons-right ms-auto">
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fas fa-file-code"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Web Development - The Complete 2022 Web Development Bootcamp By
-                            Dr.Angela Yu.</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: January'2022 to Present</p>
-                        <p class="text-muted me-4">
-                            This training covers every web development concept present to date, and I am still
-                            undergoing this training, which includes projects.
-                        </p>
-                        <a href="https://www.udemy.com/certificate/UC-f37b797c-0240-4ce8-8704-d4ebb3998598/"
-                            class="btn btn-warning me-4">
-                            See Certificate
-                        </a>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-python"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Complete Python Bootcamp From Zero to Hero in Python</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">December'2021 to Present</p>
-                        <p class="text-muted me-4">
-                            The course covered Command Line Basics, Python fundamentals, OOP, File I/O, debugging, and
-                            more essential topics.
-                        </p>
-                        <a href="https://www.udemy.com/certificate/UC-c9b0fd88-3dde-4524-81ca-cf0566971e92/"
-                            class="btn btn-warning me-4">
-                            See Certificate
-                        </a>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-python"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">The Complete JavaScript Course 2022: From Zero to Expert!</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: May'2022 to Present
-                        </p>
-                        <p class="text-muted me-4">
-                            Become an advanced JavaScript developer with Jonas Schmedtmann's course, mastering modern JS
-                            concepts, building real-world projects, and becoming job-ready.
-                        </p>
-                        <a href="https://www.udemy.com/certificate/UC-a7f1e8b5-1d16-4f7f-82b4-acb5a918c20a/"
-                            class="btn btn-warning me-4">
-                            See Certificate
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- Certification Courses Timeline ends -->
-        </div>
-
-        <!-- Training part -->
-        <div id="myTra" class="p-3 w-75 my-2 ms-4">
-
-            <div class="fs-1 fw-semibold ms-4" style="color: #00abf0;">My Trainings</div>
-
-            <!-- Training Timeline Starts-->
-            <section class="py-5">
-                <ul class="timeline-with-icons-left">
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </span>
-
-                        <h5 class="fw-bold">Winter Training 2023</h5>
-                        <p class="text-muted mb-2 fw-bold">Duration: 2022 to 2025</p>
-                        <p class="text-muted">
-                            Industrial Training on creating full stack responsive websites using HTML, CSS, JS, PHP and
-                            MySQL.
-                        </p>
-                        <a href="https://drive.google.com/file/d/14brH6D98P6UpckqKW1eBt0KP12RDMt2w/view?usp=sharing"
-                            class="btn btn-success me-4">
-                            See Certificate
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- Section: Timeline -->
-        </div>
-
-        <!-- Projects part -->
-        <div id="myPro" class="p-3 my-2 ms-auto text-end">
-
-            <div class="fs-1 fw-semibold me-4" style="color: #00abf0;">My Projects</div>
-
-            <!-- Project Timeline Starts -->
-            <section class="pt-5">
-                <ul class="timeline-with-icons-right ms-auto">
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-html5"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">First Academic Project - First Aid Delivery System (Named
-                            AidComesFirst)</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: Aug 2021 - Jun 2022</p>
-                        <p class="text-muted me-4">
-                            It is an academic project completed as the final year project for Diploma in Computer
-                            Science and Engineering. It is developed with the languages HTML, CSS, JS, PHP and MySQL as
-                            a database. It's a growing project, many more modules are being added.
-                        </p>
-                        <a href="https://drive.google.com/drive/folders/11ZgpCDeJ-DY892NaJZ5mms1WGMvi6SnH?usp=sharing"
-                            class="btn btn-warning me-4">
-                            See Project Details
-                        </a>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-html5"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Minor Project - Online Library Management System</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: August'23 to December'23</p>
-                        <p class="text-muted me-4">
-                            Online Library management system project for Btech 5th semester software engineering minor
-                            project.
-                        </p>
-                        <a href="https://github.com/ankan-coder/OLMS" class="btn btn-warning me-4">
-                            See Project Details
-                        </a>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-html5"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Personal Project - StrongPass</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">March 2024</p>
-                        <p class="text-muted me-4">
-                            StrongPass: Your Convenient Solution for Secure Passwords! Instantly generate robust
-                            passwords with just one click, seamlessly copied to your clipboard for enhanced security.
-                        </p>
-                        <a href="https://ankan-coder.github.io/StrongPass/" class="btn btn-warning me-4">
-                            Use Project
-                        </a>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-html5"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Personal Project - QRifyMe</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">March 2024</p>
-                        <p class="text-muted me-4">
-                            Welcome to QR Magic – your all-in-one QR code solution! Generate, download, and print QR
-                            codes with ease. Crafted with love using HTML, CSS, and JS.
-                        </p>
-                        <a href="https://transcendent-travesseiro-34f817.netlify.app/" class="btn btn-warning me-4">
-                            Use Project
-                        </a>
-                    </li>
-
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-html5"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Training Project - todoList</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: January'24 to February'24</p>
-                        <p class="text-muted me-4">
-                            A project made as a final project of a training of Web Development with php and MySQL.
-                        </p>
-                        <a href="https://github.com/ankan-coder/todoList" class="btn btn-warning me-4">
-                            See Project Details
-                        </a>
-                    </li>
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fab fa-html5"></i>
-                        </span>
-
-                        <h5 class="fw-bold me-4">Minor Project - Online Photo Management System</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: January'23 to August'23</p>
-                        <p class="text-muted me-4">
-                            This project was developed as a minor project during the second year of B.Tech studies. It
-                            enables users to store pictures of any format and effectively manage them. This was made
-                            using SQL and Python flask.
-                        </p>
-                        <a href="https://github.com/ankan-coder/pixelpalace" class="btn btn-warning me-4">
-                            See Project Details
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- Project Timeline ends -->
-        </div>
-
-        <!-- Internships part -->
-        <div id="myInt" class="p-3 w-75 my-2 ms-4">
-
-            <div class="fs-1 fw-semibold ms-4" style="color: #00abf0;">My Internships</div>
-
-            <!-- Internships Timeline Starts-->
-            <section class="py-5">
-                <ul class="timeline-with-icons-left">
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </span>
-
-                        <h4 class="fw-bold">Ace Overseas Education Consultants</h4>
-                        <h5 class="fw-bold">Data Research Analyst</h5>
-                        <p class="text-muted mb-2 fw-bold">Duration: May'2021 to June'2021</p>
-                        <p class="text-muted">
-                            The role was about the entry of multiple leads from different websites for any particular
-                            professional asked for by the organization.
-                        </p>
-                        <a href="https://drive.google.com/file/d/15-AGxCk0IURgCg0YCwG9jVi0DlefOM8z/view?usp=sharing"
-                            class="btn btn-success me-4">
-                            See Certificate
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- Internship Timeline ends -->
-        </div>
-
-        <!-- Jobs part -->
-        <div id="myJob" class="p-3 my-2 ms-auto text-end">
-
-            <div class="fs-1 fw-semibold me-4" style="color: #00abf0;">My Job Experiences</div>
-
-            <!-- Jobs Timeline Starts -->
-            <section class="pt-5">
-                <ul class="timeline-with-icons-right ms-auto">
-                    <li class="timeline-item mb-5">
-                        <span class="timeline-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </span>
-
-                        <h4 class="fw-bold me-4">Tuuple Technocraft Private Limited</h4>
-                        <h5 class="fw-bold me-4">Business Development Executive</h5>
-                        <p class="text-muted mb-2 fw-bold me-4">Duration: August'2021 to September'2021</p>
-                        <p class="text-muted me-4">
-                            The job was regarding business development for an android app Best tuition online developed
-                            by respected developers of the organization.
-                        </p>
-                        <a href="https://drive.google.com/file/d/1nCdAiN0GuMw-By9mdpN4ToU1VA1sqDJq/view?usp=sharing"
-                            class="btn btn-warning me-4">
-                            See Certificate
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- Jobs Timeline ends -->
-        </div>
-
-        <!-- Skills part -->
-        <div id="mySki" class="p-3 text-end">
-
-            <div class="fs-1 fw-semibold text-center" style="color: #00abf0;">My Skills</div>
-
-            <div class="container">
-
-                <div class="row-12 d-flex p-3">
-                    <div class="col-6 text-center fs-1 fw-semibold text-danger">
-                        C
-                    </div>
-                    <div class="col-6 text-center fs-1 fw-semibold text-primary">
-                        C++
-                    </div>
-                </div>
-
-                <div class="row-12 d-flex p-3">
-                    <div class="col-6 text-center fs-1 fw-semibold text-warning">
-                        JAVA
-                    </div>
-                    <div class="col-6 text-center fs-1 fw-semibold text-success">
-                        HTML
-                    </div>
-                </div>
-
-                <div class="row-12 d-flex p-3">
-                    <div class="col-6 text-center fs-1 fw-semibold text-danger">
-                        JS
-                    </div>
-                    <div class="col-6 text-center fs-1 fw-semibold text-primary">
-                        pHp
-                    </div>
-                </div>
-
-                <div class="row-12 d-flex p-3">
-                    <div class="col-6 text-center fs-1 fw-semibold text-warning">
-                        MySQL
-                    </div>
-                    <div class="col-6 text-center fs-1 fw-semibold text-success">
-                        WordPress
-                    </div>
-                </div>
-
-                <div class="row-12 d-flex p-3">
-                    <div class="col-12 text-center fs-1 fw-semibold text-success">
-                        Python
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1>Welcome to My Portfolio</h1>
+              <p class="subtitle">
+                Computer Science Student & Aspiring Developer
+              </p>
+              <p class="description">
+                Exploring the world of software development through academic
+                projects, certification courses, and hands-on experience.
+                Building a foundation in web technologies, programming
+                languages, and modern development practices.
+              </p>
+              <div class="cta-buttons">
+                <a href="#projects" class="btn-primary-custom"
+                  >Explore My Journey</a
+                >
+                <a href="#education" class="btn-outline-custom"
+                  >View Education</a
+                >
+              </div>
             </div>
-        </div>
-
-        <!-- Languages part -->
-        <div id="myLan" class="p-3 text-end">
-
-            <div class="fs-1 fw-semibold text-center" style="color: #00abf0;">Languages</div>
-
-            <div class="container">
-
-                <div class="row-12 d-flex p-3">
-                    <div class="col-lg-4 col-sm-12 text-center fs-1 fw-semibold text-success">
-                        Bengali
-                    </div>
-                    <div class="col-lg-4 col-sm-12 text-center fs-1 fw-semibold">
-                        Hindi
-                    </div>
-                    <div class="col-lg-4 col-sm-12 text-center fs-1 fw-semibold text-primary">
-                        English
-                    </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image text-center" data-aos="fade-left">
+              <div
+                style="
+                  max-width: 400px;
+                  width: 100%;
+                  margin: 0 auto;
+                  padding: 3rem;
+                  background: rgba(255, 255, 255, 0.05);
+                  border-radius: 20px;
+                  border: 1px solid rgba(255, 255, 255, 0.1);
+                  backdrop-filter: blur(10px);
+                  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                "
+              >
+                <div
+                  style="font-size: 4rem; color: #00abf0; margin-bottom: 1.5rem"
+                >
+                  <i class="fas fa-code"></i>
                 </div>
+                <h3 style="color: #ffffff; margin-bottom: 1rem">
+                  Portfolio Highlights
+                </h3>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 2rem;
+                  "
+                >
+                  <div style="text-align: center">
+                    <div
+                      style="font-size: 2rem; color: #00abf0; font-weight: bold"
+                    >
+                      6+
+                    </div>
+                    <div style="color: #b3b3b3; font-size: 0.9rem">
+                      Projects
+                    </div>
+                  </div>
+                  <div style="text-align: center">
+                    <div
+                      style="font-size: 2rem; color: #00abf0; font-weight: bold"
+                    >
+                      4+
+                    </div>
+                    <div style="color: #b3b3b3; font-size: 0.9rem">
+                      Certificates
+                    </div>
+                  </div>
+                  <div style="text-align: center">
+                    <div
+                      style="font-size: 2rem; color: #00abf0; font-weight: bold"
+                    >
+                      6+
+                    </div>
+                    <div style="color: #b3b3b3; font-size: 0.9rem">
+                      Technologies
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- Languages Timeline ends -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🎓 My Education</h2>
+          <p>My academic journey and achievements</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item timeline-left" data-aos="fade-right">
+            <div class="timeline-content">
+              <div class="card-date">2022 - 2025</div>
+              <h3>B.Tech in Computer Science and Technology</h3>
+              <p class="card-subtitle">
+                BENGAL COLLEGE OF ENGINEERING AND TECHNOLOGY, DURGAPUR
+              </p>
+              <p>
+                Currently pursuing Bachelor of Technology in Computer Science
+                and Technology with focus on modern software development and
+                engineering practices.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-right" data-aos="fade-left">
+            <div class="timeline-content">
+              <div class="card-date">2019 - 2022</div>
+              <h3>Diploma in Computer Science and Technology</h3>
+              <p class="card-subtitle">DR. B.C. ROY POLYTECHNIC, DURGAPUR</p>
+              <p>
+                Completed diploma with strong foundation in programming,
+                database management, and web development technologies.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-left" data-aos="fade-right">
+            <div class="timeline-content">
+              <div class="card-date">2017 - 2019</div>
+              <h3>Class XII - Science - CBSE</h3>
+              <p class="card-subtitle">AMRITA VIDYALAYAM, DURGAPUR</p>
+              <p>
+                Completed higher secondary education with Science stream
+                focusing on Physics, Chemistry, and Mathematics.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-right" data-aos="fade-left">
+            <div class="timeline-content">
+              <div class="card-date">2016 - 2017</div>
+              <h3>Class X - CBSE</h3>
+              <p class="card-subtitle">AMRITA VIDYALAYAM, DURGAPUR</p>
+              <p>
+                Completed secondary education with strong academic foundation in
+                core subjects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🏆 My Certification Courses</h2>
+          <p>Professional certifications and training programs</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="custom-card">
+              <h3>
+                Web Development - The Complete 2022 Web Development Bootcamp
+              </h3>
+              <p class="card-subtitle">
+                By Dr. Angela Yu - January 2022 to Present
+              </p>
+              <p>
+                Comprehensive training covering every web development concept
+                present to date, including modern frameworks, databases, and
+                full-stack development projects.
+              </p>
+              <a
+                href="https://www.udemy.com/certificate/UC-f37b797c-0240-4ce8-8704-d4ebb3998598/"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="custom-card">
+              <h3>Complete Python Bootcamp From Zero to Hero</h3>
+              <p class="card-subtitle">December 2021 to Present</p>
+              <p>
+                Comprehensive Python course covering Command Line Basics, Python
+                fundamentals, OOP, File I/O, debugging, and essential
+                programming concepts.
+              </p>
+              <a
+                href="https://www.udemy.com/certificate/UC-c9b0fd88-3dde-4524-81ca-cf0566971e92/"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="custom-card">
+              <h3>The Complete JavaScript Course 2022: From Zero to Expert!</h3>
+              <p class="card-subtitle">May 2022 to Present</p>
+              <p>
+                Advanced JavaScript development course with Jonas Schmedtmann,
+                mastering modern JS concepts, building real-world projects, and
+                becoming job-ready.
+              </p>
+              <a
+                href="https://www.udemy.com/certificate/UC-a7f1e8b5-1d16-4f7f-82b4-acb5a918c20a/"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="custom-card">
+              <h3>Winter Training 2023</h3>
+              <p class="card-subtitle">Industrial Training - 2022 to 2025</p>
+              <p>
+                Industrial training on creating full-stack responsive websites
+                using HTML, CSS, JavaScript, PHP, and MySQL with hands-on
+                project experience.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/14brH6D98P6UpckqKW1eBt0KP12RDMt2w/view?usp=sharing"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>💼 My Projects</h2>
+          <p>Showcasing my development work and innovations</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="custom-card">
+              <h3>First Academic Project - AidComesFirst</h3>
+              <p class="card-subtitle">
+                <strong>Duration:</strong> Aug 2021 - Jun 2022
+              </p>
+              <p>
+                <strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL
+              </p>
+              <p>
+                First Aid Delivery System completed as final year project for
+                Diploma in Computer Science and Engineering. A growing project
+                with multiple modules being continuously added.
+              </p>
+              <a
+                href="https://drive.google.com/drive/folders/11ZgpCDeJ-DY892NaJZ5mms1WGMvi6SnH?usp=sharing"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="custom-card">
+              <h3>Online Library Management System</h3>
+              <p class="card-subtitle">
+                <strong>Duration:</strong> August 2023 - December 2023
+              </p>
+              <p><strong>Tech Stack:</strong> Web Technologies</p>
+              <p>
+                Online Library management system project developed for B.Tech
+                5th semester software engineering minor project with
+                comprehensive library operations.
+              </p>
+              <a
+                href="https://github.com/ankan-coder/OLMS"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="custom-card">
+              <h3>StrongPass - Password Generator</h3>
+              <p class="card-subtitle"><strong>Duration:</strong> March 2024</p>
+              <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+              <p>
+                Your convenient solution for secure passwords! Instantly
+                generate robust passwords with just one click, seamlessly copied
+                to clipboard for enhanced security.
+              </p>
+              <a
+                href="https://ankan-coder.github.io/StrongPass/"
+                target="_blank"
+                class="btn-primary-custom"
+                >Use Project</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="custom-card">
+              <h3>QRifyMe - QR Code Generator</h3>
+              <p class="card-subtitle"><strong>Duration:</strong> March 2024</p>
+              <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+              <p>
+                QR Magic – your all-in-one QR code solution! Generate, download,
+                and print QR codes with ease. Crafted with modern web
+                technologies.
+              </p>
+              <a
+                href="https://transcendent-travesseiro-34f817.netlify.app/"
+                target="_blank"
+                class="btn-primary-custom"
+                >Use Project</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="custom-card">
+              <h3>todoList - Task Management</h3>
+              <p class="card-subtitle">
+                <strong>Duration:</strong> January 2024 - February 2024
+              </p>
+              <p><strong>Tech Stack:</strong> PHP, MySQL</p>
+              <p>
+                A comprehensive task management project developed as final
+                project of Web Development training with PHP and MySQL backend.
+              </p>
+              <a
+                href="https://github.com/ankan-coder/todoList"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="custom-card">
+              <h3>Online Photo Management System</h3>
+              <p class="card-subtitle">
+                <strong>Duration:</strong> January 2023 - August 2023
+              </p>
+              <p><strong>Tech Stack:</strong> Python Flask, SQL</p>
+              <p>
+                Minor project developed during second year of B.Tech studies.
+                Enables users to store pictures of any format and effectively
+                manage them using modern technologies.
+              </p>
+              <a
+                href="https://github.com/ankan-coder/pixelpalace"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>💻 My Experience</h2>
+          <p>Internships and job experiences</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item timeline-right" data-aos="fade-left">
+            <div class="timeline-content">
+              <div class="card-date">May 2021 - June 2021</div>
+              <h3>Data Research Analyst</h3>
+              <p class="card-subtitle">Ace Overseas Education Consultants</p>
+              <p>
+                Responsible for entry of multiple leads from different websites
+                for various professionals as requested by the organization.
+                Gained experience in data management and research methodologies.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/15-AGxCk0IURgCg0YCwG9jVi0DlefOM8z/view?usp=sharing"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-left" data-aos="fade-right">
+            <div class="timeline-content">
+              <div class="card-date">August 2021 - September 2021</div>
+              <h3>Business Development Executive</h3>
+              <p class="card-subtitle">Tuuple Technocraft Private Limited</p>
+              <p>
+                Worked on business development for an Android app "Best Tuition
+                Online" developed by the organization's development team.
+                Focused on market expansion and user acquisition strategies.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1nCdAiN0GuMw-By9mdpN4ToU1VA1sqDJq/view?usp=sharing"
+                target="_blank"
+                class="btn-primary-custom"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🛠️ My Skills</h2>
+          <p>Technologies and programming languages I work with</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h4>Programming Languages</h4>
+            <ul class="skills-list">
+              <li>C</li>
+              <li>C++</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h4>Web Technologies</h4>
+            <ul class="skills-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Bootstrap</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h4>Database & Tools</h4>
+            <ul class="skills-list">
+              <li>MySQL</li>
+              <li>Database Design</li>
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>Web Development</li>
+            </ul>
+          </div>
+
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+            <h4>Content Management</h4>
+            <ul class="skills-list">
+              <li>WordPress</li>
+              <li>Web Design</li>
+              <li>UI/UX Basics</li>
+              <li>Project Management</li>
+              <li>Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Languages Section -->
+    <section id="languages" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>🌐 Languages Known</h2>
+          <p>Communication across different languages and cultures</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="custom-card text-center">
+              <h3>Bengali</h3>
+              <p class="card-subtitle">Native</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="custom-card text-center">
+              <h3>Hindi</h3>
+              <p class="card-subtitle">Fluent</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="custom-card text-center">
+              <h3>English</h3>
+              <p class="card-subtitle">Professional</p>
+              <div class="progress-custom">
+                <div class="progress-bar-custom" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>📞 Get In Touch</h2>
+          <p>Let's connect and create something amazing together</p>
         </div>
 
-    </div>
+        <div class="contact-info">
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong><br />
+              <a href="mailto:ankan@example.com">ankan@example.com</a>
+            </div>
+          </div>
 
-    <script>
-        AOS.init();
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong><br />
+              <a href="tel:+1234567890">+91 12345 67890</a>
+            </div>
+          </div>
+
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong><br />
+              <a href="https://linkedin.com/in/ankan" target="_blank"
+                >Connect with me</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>GitHub</strong><br />
+              <a href="https://github.com/ankan" target="_blank"
+                >View my code</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Scroll progress bar
+      window.addEventListener("scroll", () => {
+        const scrollProgress = document.getElementById("scrollProgress");
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+        scrollProgress.style.width = scrollPercent + "%";
+      }); // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(8, 27, 41, 0.3)";
+        } else {
+          navbar.style.background = "rgba(8, 27, 41, 0.9)";
+        }
+      });
+
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Progress bar animation when visible
+      const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll(
+              ".progress-bar-custom"
+            );
+            progressBars.forEach((bar) => {
+              const width = bar.style.width;
+              bar.style.width = "0%";
+              setTimeout(() => {
+                bar.style.width = width;
+              }, 500);
+            });
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".custom-card").forEach((card) => {
+        progressObserver.observe(card);
+      });
+
+      // Parallax effect for background
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        const bgAnimation = document.querySelector(".bg-animation");
+        if (bgAnimation) {
+          bgAnimation.style.transform = `translateY(${rate}px)`;
+        }
+      });
+
+      // Add active class to nav links based on scroll position
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
