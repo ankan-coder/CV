@@ -17,8 +17,6 @@ const appSettings = {
   appId: "1:458634796365:web:b06870d9416d26750e2b04",
 };
 
-console.log("🔧 Firebase Config:", appSettings);
-
 // Initialize Firebase with error handling
 let database = null;
 
@@ -216,8 +214,6 @@ function sendMsg() {
       const successMessage = emailResult.success
         ? "Message sent successfully! You'll receive a beautiful email notification, and I'll get back to you soon."
         : "Message sent successfully! I'll get back to you soon.";
-
-      showNotification(successMessage, "success");
 
       // Show success modal (optional)
       setTimeout(() => {

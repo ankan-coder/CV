@@ -39,8 +39,9 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
       rel="stylesheet"
-    />    
-    <style>      /* Navigation */
+    />
+    <style>
+      /* Navigation */
       .navbar {
         background: rgba(8, 27, 41, 0.9) !important;
         backdrop-filter: blur(10px);
@@ -83,12 +84,13 @@
       }
     </style>
     <link rel="stylesheet" href="./CSS/style-contactMe.css" />
-    
+
     <!-- Firebase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
   </head>
-  <body style="background: #081b29">    <!-- Navigation -->
+  <body style="background: #081b29">
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="./index.html">Ankan.</a>
@@ -100,7 +102,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">          <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="./index.html">Home</a>
             </li>
@@ -113,71 +116,105 @@
           </ul>
         </div>
       </div>
-    </nav>    <!-- Hero Section -->
-    <div class="hero-section" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 80px;">
+    </nav>
+    <!-- Hero Section -->
+    <div
+      class="hero-section"
+      style="
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+      "
+    >
       <div class="container-fluid py-3">
         <div class="row align-items-center justify-content-center">
           <!-- Contact Info Side -->
-          <div class="col-lg-5 col-md-12" data-aos="fade-right" data-aos-duration="1000">
+          <div
+            class="col-lg-5 col-md-12"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <div class="contact-info">
-              <h1 class="contact-title">Get In <span class="highlight">Touch</span></h1>
+              <h1 class="contact-title">
+                Get In <span class="highlight">Touch</span>
+              </h1>
               <p class="contact-subtitle">
-                Have a project in mind? Let's collaborate and bring your ideas to life!
+                Have a project in mind? Let's collaborate and bring your ideas
+                to life!
               </p>
-                <div class="contact-details mt-4">
-                <div class="contact-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="contact-details mt-4">
+                <div
+                  class="contact-item"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <div class="contact-icon">
                     <i class="fas fa-envelope"></i>
                   </div>
                   <div class="contact-text">
                     <h4>Email</h4>
-                    <p>ankan.chakraborty@example.com</p>
+                    <p>ankang670@gmail.com</p>
                   </div>
                 </div>
-                
-                <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+
+                <div
+                  class="contact-item"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   <div class="contact-icon">
                     <i class="fas fa-phone"></i>
                   </div>
                   <div class="contact-text">
                     <h4>Phone</h4>
-                    <p>+91 12345 67890</p>
+                    <p>+91 9932749416</p>
                   </div>
                 </div>
-                
-                <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+
+                <div
+                  class="contact-item"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <div class="contact-icon">
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
                   <div class="contact-text">
                     <h4>Location</h4>
-                    <p>Kolkata, West Bengal, India</p>
+                    <p>IIIT Guwahati, Assam, India</p>
                   </div>
                 </div>
-              </div>
-
-              <!-- Social Links -->
-              <div class="social-links mt-4" data-aos="fade-up" data-aos-delay="400">
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
 
           <!-- Contact Form Side -->
-          <div class="col-lg-7 col-md-12" data-aos="fade-left" data-aos-duration="1000">
+          <div
+            class="col-lg-7 col-md-12"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <div class="contact-form-container">
               <div class="form-header">
                 <h2>Send Me a Message</h2>
-                <p>I'd love to hear from you. Send me a message and I'll respond as soon as possible.</p>
+                <p>
+                  I'd love to hear from you. Send me a message and I'll respond
+                  as soon as possible.
+                </p>
               </div>
-              
+
               <form class="contact-form" id="contactForm">
                 <div class="row">
-                  <div class="col-md-6">                    <div class="form-group" data-aos="fade-up" data-aos-delay="100">
-                      <label for="ip-name" class="form-label">Full Name</label>                      <div class="input-container">
+                  <div class="col-md-6">
+                    <div
+                      class="form-group"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
+                      <label for="ip-name" class="form-label">Full Name</label>
+                      <div class="input-container">
                         <input
                           type="text"
                           id="ip-name"
@@ -189,8 +226,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">                    <div class="form-group" data-aos="fade-up" data-aos-delay="200">
-                      <label for="ip-mail" class="form-label">Email Address</label>                      <div class="input-container">
+                  <div class="col-md-6">
+                    <div
+                      class="form-group"
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                    >
+                      <label for="ip-mail" class="form-label"
+                        >Email Address</label
+                      >
+                      <div class="input-container">
                         <input
                           type="email"
                           id="ip-mail"
@@ -203,8 +248,9 @@
                     </div>
                   </div>
                 </div>
-                  <div class="form-group" data-aos="fade-up" data-aos-delay="300">
-                  <label for="ip-subject" class="form-label">Subject</label>                  <div class="input-container">
+                <div class="form-group" data-aos="fade-up" data-aos-delay="300">
+                  <label for="ip-subject" class="form-label">Subject</label>
+                  <div class="input-container">
                     <input
                       type="text"
                       id="ip-subject"
@@ -214,8 +260,11 @@
                       required
                     />
                   </div>
-                </div>                <div class="form-group" data-aos="fade-up" data-aos-delay="400">
-                  <label for="ip-msg" class="form-label">Your Message</label>                  <div class="input-container">                    <textarea
+                </div>
+                <div class="form-group" data-aos="fade-up" data-aos-delay="400">
+                  <label for="ip-msg" class="form-label">Your Message</label>
+                  <div class="input-container">
+                    <textarea
                       id="ip-msg"
                       class="form-input form-textarea"
                       name="message"
@@ -227,11 +276,7 @@
                 </div>
 
                 <div class="form-group" data-aos="fade-up" data-aos-delay="500">
-                  <button
-                    id="sendButton"
-                    type="button"
-                    class="submit-btn"
-                  >
+                  <button id="sendButton" type="button" class="submit-btn">
                     <span class="btn-text">Send Message</span>
                     <i class="fas fa-paper-plane btn-icon"></i>
                   </button>
@@ -253,44 +298,71 @@
     </div>
 
     <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content bg-dark text-light">
           <div class="modal-header border-0">
             <h5 class="modal-title text-success" id="successModalLabel">
               <i class="fas fa-check-circle me-2"></i>Message Sent!
             </h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">
-            <p>Thank you for reaching out! I've received your message and will get back to you as soon as possible.</p>
+            <p>
+              Thank you for reaching out! I've received your message and will
+              get back to you as soon as possible.
+            </p>
           </div>
           <div class="modal-footer border-0">
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
-    </div>    <!-- AOS Script -->    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </div>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script>
       AOS.init({
         duration: 1000,
         once: true,
-        offset: 100
-      });    </script>
-    
-    <script>        // Navbar background on scroll
-        window.addEventListener("scroll", function () {
-          const navbar = document.querySelector(".navbar");
-          if (window.scrollY > 50) {
-            navbar.style.background = "rgba(8, 27, 41, 0.3)";
-          } else {
-            navbar.style.background = "rgba(8, 27, 41, 0.9)";
-          }
-        });
+        offset: 100,
+      });
     </script>
-    
+
+    <script>
+      // Navbar background on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.background = "rgba(8, 27, 41, 0.3)";
+        } else {
+          navbar.style.background = "rgba(8, 27, 41, 0.9)";
+        }
+      });
+    </script>
+
     <!-- Firebase and Contact Form Script -->
     <script src="msgbox.js"></script>
   </body>
