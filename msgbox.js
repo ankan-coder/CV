@@ -26,14 +26,14 @@ function initializeFirebase() {
     // Check if Firebase is already initialized
     if (!firebase.apps.length) {
       firebase.initializeApp(appSettings);
-      console.log("✅ Firebase initialized successfully");
+      // console.log("✅ Firebase initialized successfully");
     } else {
       console.log("✅ Firebase already initialized");
     }
 
-    console.log("🔄 Connecting to Firebase Database...");
+    // console.log("🔄 Connecting to Firebase Database...");
     database = firebase.database();
-    console.log("✅ Firebase Database connected successfully");
+    // console.log("✅ Firebase Database connected successfully");
     return true;
   } catch (error) {
     console.error("❌ Firebase initialization failed:", error);
@@ -43,14 +43,14 @@ function initializeFirebase() {
 
 // Form validation
 function validateForm() {
-  console.log("🔍 Validating form data...");
+  // console.log("🔍 Validating form data...");
 
   const name = document.getElementById("ip-name").value.trim();
   const email = document.getElementById("ip-mail").value.trim();
   const subject = document.getElementById("ip-subject").value.trim();
   const message = document.getElementById("ip-msg").value.trim();
 
-  console.log("📝 Form data:", { name, email, subject, message });
+  // console.log("📝 Form data:", { name, email, subject, message });
 
   if (!name || !email || !subject || !message) {
     console.warn("⚠️ Validation failed: Missing required fields");
@@ -66,12 +66,12 @@ function validateForm() {
     return false;
   }
 
-  console.log("✅ Form validation passed");
+  // console.log("✅ Form validation passed");
   return true;
 }
 
 function showNotification(message, type) {
-  console.log(`📢 Showing ${type} notification:`, message);
+  // console.log(`📢 Showing ${type} notification:`, message);
 
   // Remove existing notifications
   const existingNotification = document.querySelector(".notification");
@@ -84,9 +84,8 @@ function showNotification(message, type) {
   notification.className = `notification notification-${type}`;
   notification.innerHTML = `
     <div class="notification-content">
-      <i class="fas fa-${
-        type === "success" ? "check-circle" : "exclamation-circle"
-      }"></i>
+      <i class="fas fa-${type === "success" ? "check-circle" : "exclamation-circle"
+    }"></i>
       <span>${message}</span>
       <button class="notification-close" onclick="this.parentElement.parentElement.remove()">
         <i class="fas fa-times"></i>
