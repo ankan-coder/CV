@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Project Details | Ankan Chakraborty - MERN Stack Developer</title>
+    <meta name="description"
+        content="Detailed information about Ankan Chakraborty's projects including tech stack, features, and achievements." />
+    <meta name="keywords"
+        content="Ankan Chakraborty Projects, Project Details, MERN Stack, React Native, Full Stack Development" />
+    <meta name="author" content="Ankan Chakraborty" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#00abf0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./Favicons/icon.ico" />
+
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #081b29;
+            overflow-x: hidden;
+        }
+
+        /* Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .bg-animation::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: moveGrid 20s linear infinite;
+        }
+
+        @keyframes moveGrid {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+
+            100% {
+                transform: translateX(10px) translateY(10px);
+            }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(8, 27, 41, 0.9) !important;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #00abf0 !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00abf0 !important;
+        }
+
+        /* Back Button */
+        .back-btn {
+            background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 171, 240, 0.3);
+            margin-top: 100px;
+            margin-bottom: 30px;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 171, 240, 0.4);
+            color: white;
+        }
+
+        /* Project Details Container */
+        .project-details {
+            padding: 50px 0;
+            min-height: 100vh;
+        }
+
+        .project-header {
+            margin-bottom: 3rem;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00abf0 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #b3b3b3;
+            font-size: 1rem;
+        }
+
+        .meta-item i {
+            color: #00abf0;
+            font-size: 1.2rem;
+        }
+
+        .meta-item strong {
+            color: #ffffff;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .content-section:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(0, 171, 240, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00abf0;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tech-badge {
+            background: rgba(0, 171, 240, 0.1);
+            border: 1px solid rgba(0, 171, 240, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            color: #00abf0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background: rgba(0, 171, 240, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            color: #ccc;
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list li i {
+            color: #00abf0;
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 171, 240, 0.3);
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 171, 240, 0.4);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #00abf0;
+            color: #00abf0;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background: #00abf0;
+            color: #081b29;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+
+            .project-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .back-btn {
+                margin-top: 80px;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 100px 0;
+            color: #00abf0;
+            font-size: 1.5rem;
+        }
+
+        .error-message {
+            text-align: center;
+            padding: 100px 0;
+            color: #ff6b6b;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Ankan.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactMe.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Details Section -->
+    <section class="project-details">
+        <div class="container">
+            <a href="./portfolio.html#projects" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+
+            <div id="project-content">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading project details...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+
+        // Extended Projects Data with detailed information
+        const projectsDetailedData = {
+            "healthcare-app-suite": {
+                title: "Healthcare App Suite — IIIT Guwahati",
+                duration: "May 2024 - Present",
+                techStack: ["React Native", "Node.js", "MongoDB", "JWT", "Vercel", "Express.js", "REST APIs"],
+                description: "Developed and maintained production-grade mobile and web applications for symptom-based appointments, health record monitoring, and connectivity between doctors, patients, and clinics. Collaborated with Institute of Breast Diseases, Kolkata to develop ME-App for breast cancer monitoring.",
+                features: [
+                    "Symptom-based appointment booking system with intelligent matching",
+                    "Comprehensive health record monitoring and management",
+                    "Real-time connectivity between doctors, patients, and clinics/hospitals",
+                    "ME-App for breast cancer monitoring in collaboration with Institute of Breast Diseases, Kolkata",
+                    "Secure authentication using JWT tokens",
+                    "Cloud deployment on Vercel for scalability",
+                    "TYD Doc app for healthcare professionals",
+                    "tellyoudoc patient app for end users"
+                ],
+                links: [
+                    { text: "TYD Doc on Play Store", url: "https://play.google.com/store/apps/details?id=com.tellyoudoctor.doc", icon: "fab fa-google-play" },
+                    { text: "tellyoudoc on Play Store", url: "https://play.google.com/store/apps/details?id=com.tellyoudoc.patient", icon: "fab fa-google-play" },
+                    { text: "ME-App on Play Store", url: "https://play.google.com/store/apps/details?id=com.tellyoudoc.meapp", icon: "fab fa-google-play" }
+                ],
+                achievements: [
+                    "Successfully deployed production-grade applications serving real users",
+                    "Collaborated with medical institution for specialized healthcare solution",
+                    "Built scalable architecture handling multiple user roles"
+                ]
+            },
+            "rag-chatbot": {
+                title: "Retrieval Augmented Generation (RAG) Chatbot",
+                duration: "January 2026",
+                techStack: ["Python", "Gemini API", "Numpy", "Scikit-learn", "NLP", "Machine Learning"],
+                description: "A Python project that uses retrieval augmented generation (RAG) to generate responses to user queries based on PDFs uploaded by the user.",
+                features: [
+                    "PDF document processing and text extraction",
+                    "Semantic search using vector embeddings",
+                    "Integration with Google's Gemini API for natural language generation",
+                    "Context-aware response generation based on uploaded documents",
+                    "Efficient retrieval using Numpy and Scikit-learn",
+                    "User-friendly interface for document upload and querying"
+                ],
+                links: [
+                    { text: "View on GitHub", url: "https://github.com/ankan-coder/chat-with-PDFs", icon: "fab fa-github" }
+                ],
+                achievements: [
+                    "Implemented advanced RAG architecture for accurate information retrieval",
+                    "Optimized vector search for fast query responses",
+                    "Successfully integrated state-of-the-art LLM for natural conversations"
+                ]
+            },
+            "rutag-cms": {
+                title: "RUTAG — Rural Technology Action Group (IIT Guwahati)",
+                duration: "August 2025 - September 2025",
+                techStack: ["PHP", "MySQL", "PHPMailer", "jQuery", "Bootstrap", "HTML5", "CSS3"],
+                description: "Developed a full-fledged Content Management System (CMS) with Admin Panel and Frontend website for RUTAG IIT Guwahati. Enabled dynamic content management for showcasing rural technology projects and facilitating collaborations.",
+                features: [
+                    "Comprehensive Admin Panel for content management",
+                    "Dynamic frontend website with responsive design",
+                    "Project showcase module for rural technology initiatives",
+                    "Secure contact form with PHPMailer integration",
+                    "Automated email responses for inquiries",
+                    "Image and media management system",
+                    "SEO-optimized pages for better visibility",
+                    "User-friendly interface for non-technical administrators"
+                ],
+                links: [
+                    { text: "Visit Live Website", url: "https://rutagiitg.in", icon: "fas fa-globe" }
+                ],
+                achievements: [
+                    "Successfully deployed as official website for RUTAG IIT Guwahati",
+                    "Enabled efficient management of rural technology projects",
+                    "Facilitated collaboration between researchers and rural communities"
+                ]
+            },
+            "artpriyo": {
+                title: "Artpriyo – Photography Competition & Social Media App",
+                duration: "2024 - 2025",
+                techStack: ["React Native", "Node.js", "MongoDB", "JWT", "Firebase Cloud Messaging", "Razorpay", "Express.js"],
+                description: "Built a mobile platform combining photography competitions and social networking. Developed role-based admin app and JWT-secured REST APIs. Integrated payment processing, automated winner evaluation, and real-time notifications.",
+                features: [
+                    "Photography competition creation and management by admins",
+                    "Social networking features for user interaction",
+                    "Real-time chat functionality between users",
+                    "Role-based access control (Admin, User)",
+                    "JWT-secured REST APIs for authentication and authorization",
+                    "Razorpay integration for wallet top-ups",
+                    "Direct UPI-based balance withdrawals",
+                    "Automated winner evaluation using cron jobs",
+                    "Automated prize money distribution to user wallets",
+                    "Firebase Cloud Messaging (FCM) for push notifications",
+                    "Photo submission and voting system",
+                    "User profile management and social connections"
+                ],
+                links: [
+                    { text: "View Project", url: "https://github.com/ankan-coder", icon: "fab fa-github" }
+                ],
+                achievements: [
+                    "Built complete payment ecosystem with wallet and withdrawal features",
+                    "Implemented automated competition management reducing manual work",
+                    "Created engaging social platform for photography enthusiasts"
+                ]
+            },
+            "seat-management": {
+                title: "Seat Management System — IIT Guwahati RS Lab",
+                duration: "2024 - 2025",
+                techStack: ["PHP", "MySQL", "Bootstrap", "PHPMailer", "jQuery", "JavaScript"],
+                description: "Designed and developed a web-based cubicle (seat) management system for IIT Guwahati laboratories with separate Student and Admin portals. Implemented comprehensive workflows for cubicle allocation and management.",
+                features: [
+                    "Separate portals for Students and Administrators",
+                    "End-to-end cubicle request workflow",
+                    "Cubicle allocation and reservation system",
+                    "Cubicle release and reallocation functionality",
+                    "Historical tracking of all cubicle assignments",
+                    "Real-time status visualization of lab occupancy",
+                    "Comprehensive Admin Dashboard with analytics",
+                    "Lab management and configuration tools",
+                    "Request approval/rejection workflow",
+                    "Cubicle ledger for audit trails",
+                    "Analytics reports and insights",
+                    "CSV export functionality for data analysis",
+                    "Automated email notifications via PHPMailer",
+                    "Notifications for request submission, approval, and rejection"
+                ],
+                links: [
+                    { text: "View Project", url: "https://github.com/ankan-coder", icon: "fab fa-github" }
+                ],
+                achievements: [
+                    "Actively used within IIT Guwahati laboratories for daily operations",
+                    "Streamlined cubicle allocation process reducing administrative overhead",
+                    "Provided transparent system for students and administrators"
+                ]
+            }
+        };
+
+        // Get project ID from URL parameter
+        function getProjectId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('project');
+        }
+
+        // Load and display project details
+        function loadProjectDetails() {
+            const projectId = getProjectId();
+            const container = document.getElementById('project-content');
+
+            if (!projectId || !projectsDetailedData[projectId]) {
+                container.innerHTML = `
+          <div class="error-message" data-aos="fade-up">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Project not found. Please return to the portfolio.</p>
+            <a href="./portfolio.html#projects" class="btn-primary-custom" style="margin-top: 20px;">
+              <i class="fas fa-arrow-left"></i>
+              Back to Portfolio
+            </a>
+          </div>
+        `;
+                return;
+            }
+
+            const project = projectsDetailedData[projectId];
+
+            const techStackHTML = project.techStack.map(tech => `<span class="tech-badge">${tech}</span>`).join('');
+            const featuresHTML = project.features.map(feature => `<li><i class="fas fa-check-circle"></i><span>${feature}</span></li>`).join('');
+            const linksHTML = project.links.map(link => `
+        <a href="${link.url}" target="_blank" class="btn-primary-custom">
+          <i class="${link.icon}"></i>
+          ${link.text}
+        </a>
+      `).join('');
+            const achievementsHTML = project.achievements ? project.achievements.map(achievement => `<li><i class="fas fa-trophy"></i><span>${achievement}</span></li>`).join('') : '';
+
+            container.innerHTML = `
+        <div class="project-header" data-aos="fade-up">
+          <h1 class="project-title">${project.title}</h1>
+          <div class="project-meta">
+            <div class="meta-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span><strong>Duration:</strong> ${project.duration}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="section-title">
+            <i class="fas fa-info-circle"></i>
+            Overview
+          </h2>
+          <p style="color: #ccc; font-size: 1.1rem; line-height: 1.8;">${project.description}</p>
+        </div>
+
+        <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="section-title">
+            <i class="fas fa-code"></i>
+            Tech Stack
+          </h2>
+          <div class="tech-stack">
+            ${techStackHTML}
+          </div>
+        </div>
+
+        <div class="content-section" data-aos="fade-up" data-aos-delay="300">
+          <h2 class="section-title">
+            <i class="fas fa-list-check"></i>
+            Key Features
+          </h2>
+          <ul class="features-list">
+            ${featuresHTML}
+          </ul>
+        </div>
+
+        ${achievementsHTML ? `
+        <div class="content-section" data-aos="fade-up" data-aos-delay="400">
+          <h2 class="section-title">
+            <i class="fas fa-trophy"></i>
+            Achievements
+          </h2>
+          <ul class="features-list">
+            ${achievementsHTML}
+          </ul>
+        </div>
+        ` : ''}
+
+        <div class="content-section" data-aos="fade-up" data-aos-delay="500">
+          <h2 class="section-title">
+            <i class="fas fa-link"></i>
+            Project Links
+          </h2>
+          <div class="project-links">
+            ${linksHTML}
+          </div>
+        </div>
+      `;
+        }
+
+        // Load project details on page load
+        document.addEventListener('DOMContentLoaded', loadProjectDetails);
+    </script>
+</body>
+
+</html>

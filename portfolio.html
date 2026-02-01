@@ -1,677 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Portfolio & Projects | Ankan Chakraborty - MERN Stack Developer</title>
-    <meta name="description" content="Explore Ankan Chakraborty's portfolio featuring education, certifications, projects in MERN stack, web development, and professional experience. View my journey from diploma to B.Tech in Computer Science." />
-    <meta name="keywords" content="Ankan Chakraborty Portfolio, MERN Projects, Web Development Projects, Computer Science Portfolio, React Projects, Node.js Projects, Full Stack Projects, Certifications, Education" />
-    <meta name="author" content="Ankan Chakraborty" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#00abf0" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.ankanchakraborty.site/portfolio.html" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ankanchakraborty.site/portfolio.html" />
-    <meta property="og:title" content="Portfolio & Projects | Ankan Chakraborty - MERN Stack Developer" />
-    <meta property="og:description" content="Explore my portfolio featuring education, certifications, and projects in MERN stack, web development, and professional experience." />
-    <meta property="og:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
-    <meta property="og:site_name" content="Ankan Chakraborty Portfolio" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Portfolio & Projects | Ankan Chakraborty - MERN Stack Developer" />
-    <meta name="twitter:description" content="Explore my portfolio featuring education, certifications, and projects in MERN stack, web development, and professional experience." />
-    <meta name="twitter:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./Favicons/icon.ico" />
-    
-    <!-- External Libraries -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-        color: #ffffff;
-        background: #081b29;
-        overflow-x: hidden;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      /* Background Animation */
-      .bg-animation {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        opacity: 0.1;
-      }
+  <!-- SEO Meta Tags -->
+  <title>Portfolio & Projects | Ankan Chakraborty - MERN Stack Developer</title>
+  <meta name="description"
+    content="Explore Ankan Chakraborty's portfolio featuring education, certifications, projects in MERN stack, web development, and professional experience. View my journey from diploma to B.Tech in Computer Science." />
+  <meta name="keywords"
+    content="Ankan Chakraborty Portfolio, MERN Projects, Web Development Projects, Computer Science Portfolio, React Projects, Node.js Projects, Full Stack Projects, Certifications, Education" />
+  <meta name="author" content="Ankan Chakraborty" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#00abf0" />
 
-      .bg-animation::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-        animation: moveGrid 20s linear infinite;
-      }
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.ankanchakraborty.site/portfolio.html" />
 
-      @keyframes moveGrid {
-        0% {
-          transform: translateX(0) translateY(0);
-        }
-        100% {
-          transform: translateX(10px) translateY(10px);
-        }
-      } /* Navigation */
-      .navbar {
-        background: rgba(8, 27, 41, 0.9) !important;
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-        padding: 15px 0;
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ankanchakraborty.site/portfolio.html" />
+  <meta property="og:title" content="Portfolio & Projects | Ankan Chakraborty - MERN Stack Developer" />
+  <meta property="og:description"
+    content="Explore my portfolio featuring education, certifications, and projects in MERN stack, web development, and professional experience." />
+  <meta property="og:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
+  <meta property="og:site_name" content="Ankan Chakraborty Portfolio" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio & Projects | Ankan Chakraborty - MERN Stack Developer" />
+  <meta name="twitter:description"
+    content="Explore my portfolio featuring education, certifications, and projects in MERN stack, web development, and professional experience." />
+  <meta name="twitter:image" content="https://www.ankanchakraborty.site/images/AnkanPF.JPG" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./Favicons/icon.ico" />
+
+  <!-- External Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #ffffff;
+      background: #081b29;
+      overflow-x: hidden;
+    }
+
+    /* Background Animation */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .bg-animation::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      animation: moveGrid 20s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      0% {
+        transform: translateX(0) translateY(0);
       }
 
-      .navbar-brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: #00abf0 !important;
+      100% {
+        transform: translateX(10px) translateY(10px);
       }
+    }
 
-      .navbar-nav .nav-link {
-        color: #ffffff !important;
-        font-weight: 500;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-        position: relative;
-      }
-      .navbar-nav .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        background: #00abf0;
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
+    /* Navigation */
+    .navbar {
+      background: rgba(8, 27, 41, 0.9) !important;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      padding: 15px 0;
+    }
 
-      .navbar-nav .nav-link:hover::after {
-        width: 100%;
-      }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #00abf0 !important;
+    }
 
-      .navbar-nav .nav-link:hover {
-        color: #00abf0 !important;
-      } /* Hero Section */
-      .hero-section {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background: #081b29;
-        text-align: center;
-      }
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
 
-      .hero-section .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background: #00abf0;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
 
-      .hero-section .row {
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
-      .hero-content h1 {
-        font-size: 4rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #00abf0 0%, #ffffff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 1rem;
-        animation: fadeInUp 1s ease;
-      }
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
 
-      .hero-content .subtitle {
-        font-size: 1.5rem;
-        color: #b3b3b3;
-        margin-bottom: 2rem;
-        animation: fadeInUp 1s ease 0.2s both;
-      }
+    .navbar-nav .nav-link:hover {
+      color: #00abf0 !important;
+    }
 
-      .hero-content .description {
-        font-size: 1.1rem;
-        color: #888;
-        margin-bottom: 3rem;
-        animation: fadeInUp 1s ease 0.4s both;
-      }
+    /* Hero Section */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: #081b29;
+      text-align: center;
+    }
 
-      .cta-buttons {
-        animation: fadeInUp 1s ease 0.6s both;
-      }
-      .btn-primary-custom {
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        border: none;
-        padding: 12px 30px;
-        border-radius: 50px;
-        font-weight: 600;
-        color: white;
-        text-decoration: none;
-        display: inline-block;
-        margin-right: 15px;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 171, 240, 0.3);
-      }
+    .hero-section .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .btn-primary-custom:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 171, 240, 0.4);
-        color: white;
-      }
+    .hero-section .row {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
 
-      .btn-outline-custom {
-        border: 2px solid #00abf0;
-        color: #00abf0;
-        padding: 10px 28px;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.3s ease;
-      }
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #00abf0 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease;
+    }
 
-      .btn-outline-custom:hover {
-        background: #00abf0;
-        color: #081b29;
-        transform: translateY(-3px);
-      }
+    .hero-content .subtitle {
+      font-size: 1.5rem;
+      color: #b3b3b3;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
 
-      /* Section Styles */
-      .section {
-        padding: 100px 0;
-        position: relative;
-      }
+    .hero-content .description {
+      font-size: 1.1rem;
+      color: #888;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
 
-      .section-title {
-        text-align: center;
-        margin-bottom: 4rem;
-      }
+    .cta-buttons {
+      animation: fadeInUp 1s ease 0.6s both;
+    }
 
-      .section-title h2 {
-        font-size: 3rem;
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 1rem;
-        position: relative;
-        display: inline-block;
-      }
-      .section-title h2::after {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 4px;
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-      }
+    .btn-primary-custom {
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 171, 240, 0.3);
+    }
 
-      .section-title p {
-        color: #b3b3b3;
-        font-size: 1.1rem;
-      }
+    .btn-primary-custom:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 171, 240, 0.4);
+      color: white;
+    }
 
-      /* Card Styles */
-      .custom-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 2rem;
-        height: 100%;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-      }
-      .custom-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-      }
+    .btn-outline-custom {
+      border: 2px solid #00abf0;
+      color: #00abf0;
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
 
-      .custom-card:hover::before {
-        transform: translateX(0);
-      }
-      .custom-card:hover {
-        transform: translateY(-10px);
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(0, 171, 240, 0.3);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      }
+    .btn-outline-custom:hover {
+      background: #00abf0;
+      color: #081b29;
+      transform: translateY(-3px);
+    }
 
-      .custom-card h3 {
-        color: #00abf0;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-      }
+    /* Section Styles */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
 
-      .custom-card .card-date {
-        color: #888;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-      }
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
 
-      .custom-card .card-subtitle {
-        color: #b3b3b3;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-      }
+    .section-title h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
 
-      .custom-card p {
-        color: #ccc;
-        line-height: 1.6;
-      }
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 4px;
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
 
-      /* Skills Grid */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-      }
+    .section-title p {
+      color: #b3b3b3;
+      font-size: 1.1rem;
+    }
 
-      .skill-category {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        padding: 2rem;
-        text-align: center;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-      }
-      .skill-category:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(0, 171, 240, 0.3);
-      }
+    /* Card Styles */
+    .custom-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
 
-      .skill-category h4 {
-        color: #00abf0;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-        font-size: 1.2rem;
-      }
+    .custom-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
 
-      .skill-category .skills-list {
-        list-style: none;
-      }
+    .custom-card:hover::before {
+      transform: translateX(0);
+    }
 
-      .skill-category .skills-list li {
-        color: #ccc;
-        padding: 0.5rem 0;
-        font-size: 0.95rem;
-        transition: color 0.3s ease;
-      }
-      .skill-category .skills-list li:hover {
-        color: #00abf0;
-      }
+    .custom-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 171, 240, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
 
-      /* Progress Bars */
-      .progress-custom {
-        height: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 4px;
-        margin-top: 1rem;
-        overflow: hidden;
-      }
-      .progress-bar-custom {
-        height: 100%;
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        border-radius: 4px;
-        transition: width 2s ease;
-        position: relative;
-      }
+    .custom-card h3 {
+      color: #00abf0;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
 
-      .progress-bar-custom::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(
-          45deg,
+    .custom-card .card-date {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .custom-card .card-subtitle {
+      color: #b3b3b3;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .custom-card p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .skill-category {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(0, 171, 240, 0.3);
+    }
+
+    .skill-category h4 {
+      color: #00abf0;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    .skill-category .skills-list {
+      list-style: none;
+    }
+
+    .skill-category .skills-list li {
+      color: #ccc;
+      padding: 0.5rem 0;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .skill-category .skills-list li:hover {
+      color: #00abf0;
+    }
+
+    /* Progress Bars */
+    .progress-custom {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+
+    .progress-bar-custom {
+      height: 100%;
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      border-radius: 4px;
+      transition: width 2s ease;
+      position: relative;
+    }
+
+    .progress-bar-custom::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(45deg,
           transparent 35%,
           rgba(255, 255, 255, 0.2) 50%,
-          transparent 65%
-        );
-        animation: shimmer 2s infinite;
+          transparent 65%);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        transform: translateX(-100%);
       }
 
-      @keyframes shimmer {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(100%);
-        }
+      100% {
+        transform: translateX(100%);
       }
+    }
 
-      /* Timeline */
-      .timeline {
-        position: relative;
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-      .timeline::after {
-        content: "";
-        position: absolute;
-        width: 3px;
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        margin-left: -1.5px;
-        border-radius: 2px;
-      }
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-      .timeline-item {
-        padding: 10px 40px;
-        position: relative;
-        background-color: inherit;
-        width: 50%;
-      }
-      .timeline-item::after {
-        content: "";
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        right: -12px;
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        border: 3px solid #081b29;
-        top: 15px;
-        border-radius: 50%;
-        z-index: 1;
-        box-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
-      }
+    .timeline::after {
+      content: "";
+      position: absolute;
+      width: 3px;
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1.5px;
+      border-radius: 2px;
+    }
 
-      .timeline-left {
-        left: 0;
-      }
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
 
-      .timeline-right {
-        left: 50%;
-      }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -12px;
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      border: 3px solid #081b29;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
+    }
 
-      .timeline-right::after {
-        left: -12px;
-      }
+    .timeline-left {
+      left: 0;
+    }
 
-      .timeline-content {
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.05);
-        position: relative;
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-      }
+    .timeline-right {
+      left: 50%;
+    }
 
-      .timeline-content:hover {
-        background: rgba(255, 255, 255, 0.08);
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-      }
+    .timeline-right::after {
+      left: -12px;
+    }
 
-      /* Contact Section */
-      .contact-info {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        margin-top: 3rem;
-      }
+    .timeline-content {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      position: relative;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
 
-      .contact-item {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 1.5rem 2rem;
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        transition: all 0.3s ease;
-        text-align: center;
-        min-width: 200px;
-      }
-      .contact-item:hover {
-        background: rgba(255, 255, 255, 0.08);
-        transform: translateY(-5px);
-        border-color: rgba(0, 171, 240, 0.3);
-      }
+    .timeline-content:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
 
-      .contact-item i {
-        font-size: 2rem;
-        color: #00abf0;
-        margin-bottom: 1rem;
-      }
+    /* Contact Section */
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
 
-      .contact-item a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-      .contact-item a:hover {
-        color: #00abf0;
-      }
+    .contact-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem 2rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      text-align: center;
+      min-width: 200px;
+    }
 
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+      border-color: rgba(0, 171, 240, 0.3);
+    }
 
-      .fade-in {
+    .contact-item i {
+      font-size: 2rem;
+      color: #00abf0;
+      margin-bottom: 1rem;
+    }
+
+    .contact-item a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      color: #00abf0;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
         opacity: 0;
         transform: translateY(30px);
-        transition: all 0.8s ease;
       }
 
-      .fade-in.visible {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
+    }
 
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .hero-content h1 {
-          font-size: 2.5rem;
-        }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
 
-        .hero-content .subtitle {
-          font-size: 1.2rem;
-        }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        .section-title h2 {
-          font-size: 2.2rem;
-        }
-
-        .timeline::after {
-          left: 31px;
-        }
-
-        .timeline-item {
-          width: 100%;
-          padding-left: 70px;
-          padding-right: 25px;
-        }
-
-        .timeline-item::after {
-          left: 15px;
-        }
-
-        .timeline-right {
-          left: 0%;
-        }
-
-        .skills-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact-info {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .cta-buttons {
-          text-align: center;
-        }
-
-        .btn-primary-custom,
-        .btn-outline-custom {
-          display: block;
-          margin: 10px auto;
-          width: fit-content;
-        }
-      } /* Scroll Progress Bar */
-      .scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
-        z-index: 9999;
-        transition: width 0.3s ease;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
       }
-    </style>
-  </head>
-  Z
-  <body>
-    <!-- Background Animation -->
-    <div class="bg-animation"></div>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+      .hero-content .subtitle {
+        font-size: 1.2rem;
+      }
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">Ankan.</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">My Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#certifications">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#languages">Languages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./contactMe.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+
+      .timeline::after {
+        left: 31px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-item::after {
+        left: 15px;
+      }
+
+      .timeline-right {
+        left: 0%;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-buttons {
+        text-align: center;
+      }
+
+      .btn-primary-custom,
+      .btn-outline-custom {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+      }
+    }
+
+    /* Scroll Progress Bar */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(135deg, #00abf0 0%, #0088cc 100%);
+      z-index: 9999;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+Z
+
+<body>
+  <!-- Background Animation -->
+  <div class="bg-animation"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Ankan.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">My Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certifications">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#languages">Languages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactMe.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content">
-              <h1>Welcome to My Portfolio</h1>
-              <p class="subtitle">
-                Computer Science Student & Aspiring Developer
-              </p>
-              <p class="description">
-                Exploring the world of software development through academic
-                projects, certification courses, and hands-on experience.
-                Building a foundation in web technologies, programming
-                languages, and modern development practices.
-              </p>
-              <div class="cta-buttons">
-                <a href="#projects" class="btn-primary-custom"
-                  >Explore My Journey</a
-                >
-                <a href="#education" class="btn-outline-custom"
-                  >View Education</a
-                >
-              </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <div class="cta-buttons">
+              <a href="#projects" class="btn-primary-custom">Explore My Journey</a>
+              <a href="./Ankan_Chakraborty_CV.pdf" download class="btn-outline-custom">Download CV</a>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="hero-image text-center" data-aos="fade-left">
-              <div
-                style="
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image text-center" data-aos="fade-left">
+            <div style="
                   max-width: 400px;
                   width: 100%;
                   margin: 0 auto;
@@ -681,52 +681,40 @@
                   border: 1px solid rgba(255, 255, 255, 0.1);
                   backdrop-filter: blur(10px);
                   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-                "
-              >
-                <div
-                  style="font-size: 4rem; color: #00abf0; margin-bottom: 1.5rem"
-                >
-                  <i class="fas fa-code"></i>
-                </div>
-                <h3 style="color: #ffffff; margin-bottom: 1rem">
-                  Portfolio Highlights
-                </h3>
-                <div
-                  style="
+                ">
+              <div style="font-size: 4rem; color: #00abf0; margin-bottom: 1.5rem">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 style="color: #ffffff; margin-bottom: 1rem">
+                Portfolio Highlights
+              </h3>
+              <div style="
                     display: flex;
                     justify-content: space-around;
                     margin-top: 2rem;
-                  "
-                >
-                  <div style="text-align: center">
-                    <div
-                      style="font-size: 2rem; color: #00abf0; font-weight: bold"
-                    >
-                      6+
-                    </div>
-                    <div style="color: #b3b3b3; font-size: 0.9rem">
-                      Projects
-                    </div>
+                  ">
+                <div style="text-align: center">
+                  <div style="font-size: 2rem; color: #00abf0; font-weight: bold">
+                    6+
                   </div>
-                  <div style="text-align: center">
-                    <div
-                      style="font-size: 2rem; color: #00abf0; font-weight: bold"
-                    >
-                      4+
-                    </div>
-                    <div style="color: #b3b3b3; font-size: 0.9rem">
-                      Certificates
-                    </div>
+                  <div style="color: #b3b3b3; font-size: 0.9rem">
+                    Projects
                   </div>
-                  <div style="text-align: center">
-                    <div
-                      style="font-size: 2rem; color: #00abf0; font-weight: bold"
-                    >
-                      6+
-                    </div>
-                    <div style="color: #b3b3b3; font-size: 0.9rem">
-                      Technologies
-                    </div>
+                </div>
+                <div style="text-align: center">
+                  <div style="font-size: 2rem; color: #00abf0; font-weight: bold">
+                    4+
+                  </div>
+                  <div style="color: #b3b3b3; font-size: 0.9rem">
+                    Certificates
+                  </div>
+                </div>
+                <div style="text-align: center">
+                  <div style="font-size: 2rem; color: #00abf0; font-weight: bold">
+                    6+
+                  </div>
+                  <div style="color: #b3b3b3; font-size: 0.9rem">
+                    Technologies
                   </div>
                 </div>
               </div>
@@ -734,511 +722,481 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>🎓 My Education</h2>
-          <p>My academic journey and achievements</p>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item timeline-left" data-aos="fade-right">
-            <div class="timeline-content">
-              <div class="card-date">2022 - 2025</div>
-              <h3>B.Tech in Computer Science and Technology</h3>
-              <p class="card-subtitle">
-                BENGAL COLLEGE OF ENGINEERING AND TECHNOLOGY, DURGAPUR
-              </p>
-              <p>
-                Currently pursuing Bachelor of Technology in Computer Science
-                and Technology with focus on modern software development and
-                engineering practices.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item timeline-right" data-aos="fade-left">
-            <div class="timeline-content">
-              <div class="card-date">2019 - 2022</div>
-              <h3>Diploma in Computer Science and Technology</h3>
-              <p class="card-subtitle">DR. B.C. ROY POLYTECHNIC, DURGAPUR</p>
-              <p>
-                Completed diploma with strong foundation in programming,
-                database management, and web development technologies.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item timeline-left" data-aos="fade-right">
-            <div class="timeline-content">
-              <div class="card-date">2017 - 2019</div>
-              <h3>Class XII - Science - CBSE</h3>
-              <p class="card-subtitle">AMRITA VIDYALAYAM, DURGAPUR</p>
-              <p>
-                Completed higher secondary education with Science stream
-                focusing on Physics, Chemistry, and Mathematics.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item timeline-right" data-aos="fade-left">
-            <div class="timeline-content">
-              <div class="card-date">2016 - 2017</div>
-              <h3>Class X - CBSE</h3>
-              <p class="card-subtitle">AMRITA VIDYALAYAM, DURGAPUR</p>
-              <p>
-                Completed secondary education with strong academic foundation in
-                core subjects.
-              </p>
-            </div>
-          </div>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>My Projects</h2>
       </div>
-    </section>
-    <!-- Certifications Section -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>🏆 My Certification Courses</h2>
-          <p>Professional certifications and training programs</p>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="custom-card">
-              <h3>
-                Web Development - The Complete 2022 Web Development Bootcamp
-              </h3>
-              <p class="card-subtitle">
-                By Dr. Angela Yu - January 2022 to Present
-              </p>
-              <p>
-                Comprehensive training covering every web development concept
-                present to date, including modern frameworks, databases, and
-                full-stack development projects.
-              </p>
-              <a
-                href="https://www.udemy.com/certificate/UC-f37b797c-0240-4ce8-8704-d4ebb3998598/"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Certificate</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="custom-card">
-              <h3>Complete Python Bootcamp From Zero to Hero</h3>
-              <p class="card-subtitle">December 2021 to Present</p>
-              <p>
-                Comprehensive Python course covering Command Line Basics, Python
-                fundamentals, OOP, File I/O, debugging, and essential
-                programming concepts.
-              </p>
-              <a
-                href="https://www.udemy.com/certificate/UC-c9b0fd88-3dde-4524-81ca-cf0566971e92/"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Certificate</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="custom-card">
-              <h3>The Complete JavaScript Course 2022: From Zero to Expert!</h3>
-              <p class="card-subtitle">May 2022 to Present</p>
-              <p>
-                Advanced JavaScript development course with Jonas Schmedtmann,
-                mastering modern JS concepts, building real-world projects, and
-                becoming job-ready.
-              </p>
-              <a
-                href="https://www.udemy.com/certificate/UC-a7f1e8b5-1d16-4f7f-82b4-acb5a918c20a/"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Certificate</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="custom-card">
-              <h3>Winter Training 2023</h3>
-              <p class="card-subtitle">Industrial Training - 2022 to 2025</p>
-              <p>
-                Industrial training on creating full-stack responsive websites
-                using HTML, CSS, JavaScript, PHP, and MySQL with hands-on
-                project experience.
-              </p>
-              <a
-                href="https://drive.google.com/file/d/14brH6D98P6UpckqKW1eBt0KP12RDMt2w/view?usp=sharing"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Certificate</a
-              >
-            </div>
-          </div>
-        </div>
+      <div class="row" id="projects-container">
+        <!-- Projects will be dynamically loaded here -->
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>💼 My Projects</h2>
-          <p>Showcasing my development work and innovations</p>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="custom-card">
-              <h3>First Academic Project - AidComesFirst</h3>
-              <p class="card-subtitle">
-                <strong>Duration:</strong> Aug 2021 - Jun 2022
-              </p>
-              <p>
-                <strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL
-              </p>
-              <p>
-                First Aid Delivery System completed as final year project for
-                Diploma in Computer Science and Engineering. A growing project
-                with multiple modules being continuously added.
-              </p>
-              <a
-                href="https://drive.google.com/drive/folders/11ZgpCDeJ-DY892NaJZ5mms1WGMvi6SnH?usp=sharing"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Project</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="custom-card">
-              <h3>Online Library Management System</h3>
-              <p class="card-subtitle">
-                <strong>Duration:</strong> August 2023 - December 2023
-              </p>
-              <p><strong>Tech Stack:</strong> Web Technologies</p>
-              <p>
-                Online Library management system project developed for B.Tech
-                5th semester software engineering minor project with
-                comprehensive library operations.
-              </p>
-              <a
-                href="https://github.com/ankan-coder/OLMS"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Project</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="custom-card">
-              <h3>StrongPass - Password Generator</h3>
-              <p class="card-subtitle"><strong>Duration:</strong> March 2024</p>
-              <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-              <p>
-                Your convenient solution for secure passwords! Instantly
-                generate robust passwords with just one click, seamlessly copied
-                to clipboard for enhanced security.
-              </p>
-              <a
-                href="https://ankan-coder.github.io/StrongPass/"
-                target="_blank"
-                class="btn-primary-custom"
-                >Use Project</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="custom-card">
-              <h3>QRifyMe - QR Code Generator</h3>
-              <p class="card-subtitle"><strong>Duration:</strong> March 2024</p>
-              <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-              <p>
-                QR Magic – your all-in-one QR code solution! Generate, download,
-                and print QR codes with ease. Crafted with modern web
-                technologies.
-              </p>
-              <a
-                href="https://transcendent-travesseiro-34f817.netlify.app/"
-                target="_blank"
-                class="btn-primary-custom"
-                >Use Project</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="custom-card">
-              <h3>todoList - Task Management</h3>
-              <p class="card-subtitle">
-                <strong>Duration:</strong> January 2024 - February 2024
-              </p>
-              <p><strong>Tech Stack:</strong> PHP, MySQL</p>
-              <p>
-                A comprehensive task management project developed as final
-                project of Web Development training with PHP and MySQL backend.
-              </p>
-              <a
-                href="https://github.com/ankan-coder/todoList"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Project</a
-              >
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="custom-card">
-              <h3>Online Photo Management System</h3>
-              <p class="card-subtitle">
-                <strong>Duration:</strong> January 2023 - August 2023
-              </p>
-              <p><strong>Tech Stack:</strong> Python Flask, SQL</p>
-              <p>
-                Minor project developed during second year of B.Tech studies.
-                Enables users to store pictures of any format and effectively
-                manage them using modern technologies.
-              </p>
-              <a
-                href="https://github.com/ankan-coder/pixelpalace"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Project</a
-              >
-            </div>
-          </div>
-        </div>
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>My Experience</h2>
       </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>💻 My Experience</h2>
-          <p>Internships and job experiences</p>
+      <div class="timeline">
+        <div class="timeline-item timeline-right" data-aos="fade-left">
+          <div class="timeline-content">
+            <div class="card-date">May 2021 - June 2021</div>
+            <h3>Data Research Analyst</h3>
+            <p class="card-subtitle">Ace Overseas Education Consultants</p>
+            <p>
+              Responsible for entry of multiple leads from different websites
+              for various professionals as requested by the organization.
+              Gained experience in data management and research methodologies.
+            </p>
+            <a href="https://drive.google.com/file/d/15-AGxCk0IURgCg0YCwG9jVi0DlefOM8z/view?usp=sharing" target="_blank"
+              class="btn-primary-custom">View Certificate</a>
+          </div>
         </div>
-        <div class="timeline">
-          <div class="timeline-item timeline-right" data-aos="fade-left">
-            <div class="timeline-content">
-              <div class="card-date">May 2021 - June 2021</div>
-              <h3>Data Research Analyst</h3>
-              <p class="card-subtitle">Ace Overseas Education Consultants</p>
-              <p>
-                Responsible for entry of multiple leads from different websites
-                for various professionals as requested by the organization.
-                Gained experience in data management and research methodologies.
-              </p>
-              <a
-                href="https://drive.google.com/file/d/15-AGxCk0IURgCg0YCwG9jVi0DlefOM8z/view?usp=sharing"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Certificate</a
-              >
-            </div>
-          </div>
 
-          <div class="timeline-item timeline-left" data-aos="fade-right">
-            <div class="timeline-content">
-              <div class="card-date">August 2021 - September 2021</div>
-              <h3>Business Development Executive</h3>
-              <p class="card-subtitle">Tuuple Technocraft Private Limited</p>
-              <p>
-                Worked on business development for an Android app "Best Tuition
-                Online" developed by the organization's development team.
-                Focused on market expansion and user acquisition strategies.
-              </p>
-              <a
-                href="https://drive.google.com/file/d/1nCdAiN0GuMw-By9mdpN4ToU1VA1sqDJq/view?usp=sharing"
-                target="_blank"
-                class="btn-primary-custom"
-                >View Certificate</a
-              >
-            </div>
+        <div class="timeline-item timeline-left" data-aos="fade-right">
+          <div class="timeline-content">
+            <div class="card-date">August 2021 - September 2021</div>
+            <h3>Business Development Executive</h3>
+            <p class="card-subtitle">Tuuple Technocraft Private Limited</p>
+            <p>
+              Worked on business development for an Android app "Best Tuition
+              Online" developed by the organization's development team.
+              Focused on market expansion and user acquisition strategies.
+            </p>
+            <a href="https://drive.google.com/file/d/1nCdAiN0GuMw-By9mdpN4ToU1VA1sqDJq/view?usp=sharing" target="_blank"
+              class="btn-primary-custom">View Certificate</a>
           </div>
+        </div>
 
-          <div class="timeline-item timeline-right" data-aos="fade-left">
-            <div class="timeline-content">
-              <div class="card-date">May 2024 - Present</div>
-              <h3>Developer & Project Associate</h3>
-              <p class="card-subtitle">IIIT Guwahati, Assam, India</p>
-              <p>
-                Worked on a project "tellyoudoc" for private practice doctors to
-                get the best doctors for their patients. Focused on market
-                expansion and user acquisition strategies. It is a mobile app
-                for the students of IIIT Guwahati to get the best doctors for
-                their studies.
-              </p>
-              <!-- <a
+        <div class="timeline-item timeline-right" data-aos="fade-left">
+          <div class="timeline-content">
+            <div class="card-date">May 2024 - Present</div>
+            <h3>Developer & Project Associate</h3>
+            <p class="card-subtitle">IIIT Guwahati, Assam, India</p>
+            <p>
+              Worked on a project "tellyoudoc" for private practice doctors to
+              get the best doctors for their patients. Focused on market
+              expansion and user acquisition strategies. It is a mobile app
+              for the students of IIIT Guwahati to get the best doctors for
+              their studies.
+            </p>
+            <!-- <a
                 href="https://drive.google.com/file/d/1nCdAiN0GuMw-By9mdpN4ToU1VA1sqDJq/view?usp=sharing"
                 target="_blank"
                 class="btn-primary-custom"
                 >View Certificate</a
               > -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>🛠️ My Skills</h2>
+        <p>Technologies and programming languages I work with</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h4>Languages & Frameworks</h4>
+          <ul class="skills-list">
+            <li>JavaScript, PHP, Node.js</li>
+            <li>React, React Native, Express.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h4>Databases & Auth</h4>
+          <ul class="skills-list">
+            <li>MongoDB, MySQL, Firebase Firestore Database</li>
+            <li>JWT, Firebase Auth</li>
+          </ul>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h4>Tools & Platforms</h4>
+          <ul class="skills-list">
+            <li>Git, Postman, Vercel, Render</li>
+            <li>VS Code, XAMPP, Expo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>My Education</h2>
+      </div>
+      <div class="row" id="education-container">
+        <!-- Education cards will be dynamically loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>🏆 My Certification Courses</h2>
+        <p>Professional certifications and training programs</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="custom-card">
+            <h3>
+              Web Development - The Complete 2022 Web Development Bootcamp
+            </h3>
+            <p class="card-subtitle">
+              By Dr. Angela Yu - January 2022 to Present
+            </p>
+            <p>
+              Comprehensive training covering every web development concept
+              present to date, including modern frameworks, databases, and
+              full-stack development projects.
+            </p>
+            <a href="https://www.udemy.com/certificate/UC-f37b797c-0240-4ce8-8704-d4ebb3998598/" target="_blank"
+              class="btn-primary-custom">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="custom-card">
+            <h3>Complete Python Bootcamp From Zero to Hero</h3>
+            <p class="card-subtitle">December 2021 to Present</p>
+            <p>
+              Comprehensive Python course covering Command Line Basics, Python
+              fundamentals, OOP, File I/O, debugging, and essential
+              programming concepts.
+            </p>
+            <a href="https://www.udemy.com/certificate/UC-c9b0fd88-3dde-4524-81ca-cf0566971e92/" target="_blank"
+              class="btn-primary-custom">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="custom-card">
+            <h3>The Complete JavaScript Course 2022: From Zero to Expert!</h3>
+            <p class="card-subtitle">May 2022 to Present</p>
+            <p>
+              Advanced JavaScript development course with Jonas Schmedtmann,
+              mastering modern JS concepts, building real-world projects, and
+              becoming job-ready.
+            </p>
+            <a href="https://www.udemy.com/certificate/UC-a7f1e8b5-1d16-4f7f-82b4-acb5a918c20a/" target="_blank"
+              class="btn-primary-custom">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="custom-card">
+            <h3>Winter Training 2023</h3>
+            <p class="card-subtitle">Industrial Training - 2022 to 2025</p>
+            <p>
+              Industrial training on creating full-stack responsive websites
+              using HTML, CSS, JavaScript, PHP, and MySQL with hands-on
+              project experience.
+            </p>
+            <a href="https://drive.google.com/file/d/14brH6D98P6UpckqKW1eBt0KP12RDMt2w/view?usp=sharing" target="_blank"
+              class="btn-primary-custom">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+    });
+
+    // Projects Data
+    const projectsData = [
+      {
+        id: "healthcare-app-suite",
+        title: "Healthcare App Suite — IIIT Guwahati",
+        duration: "May 2024 - Present",
+        techStack: "MERN, React Native, Vercel",
+        description: "Developed mobile/web apps for symptom-based bookings, health monitoring, and doctor-patient-clinic connectivity. Built ME-App with Institute of Breast Diseases, Kolkata, for breast cancer monitoring; OPD/medical test web panel; and appsuite admin panel.",
+        link: "",
+        buttonText: "",
+        hasDetails: true,
+        showExternalLink: false,
+        delay: 100
+      },
+      {
+        id: "rag-chatbot",
+        title: "Retrieval Augmented Generation (RAG) Chatbot",
+        duration: "January 2026",
+        techStack: "Python, Gemini API, Numpy, Scikit-learn",
+        description: "A python project that uses retrieval augmented generation (RAG) to generate responses to user queries based on pdf uploaded by the user.",
+        link: "https://github.com/ankan-coder/chat-with-PDFs",
+        buttonText: "View Project",
+        hasDetails: false,
+        showExternalLink: true,
+        delay: 500
+      },
+      {
+        id: "rutag-cms",
+        title: "Rutag IITG - CMS",
+        duration: "August 2025 - September 2025",
+        techStack: "PHP, MySQL, phpMailer, jQuery",
+        description: "A CMS for Rutag IITG that showcases the activities and achievements of the organization, developed as a freelance project. It includes a responsive website, which is fully dynamic and can be updated by the admin through an admin panel.",
+        link: "https://rutagiitg.in",
+        buttonText: "Visit Website",
+        hasDetails: false,
+        showExternalLink: true,
+        delay: 600
+      },
+      {
+        id: "seat-management",
+        title: "Seat Management System — IIT Guwahati RS Lab",
+        duration: "2024 - 2025",
+        techStack: "PHP, MySQL, Bootstrap, PHPMailer",
+        description: "Developed cubicle management system as internship project for IIT Guwahati labs with student/admin portals. Implemented workflows for requests, allocation, reservations, releases, historical tracking, admin dashboard, and automated email notifications. Currently used internally at IITG.",
+        link: "",
+        buttonText: "",
+        hasDetails: true,
+        showExternalLink: false,
+        delay: 400
+      },
+      {
+        id: "artpriyo",
+        title: "Artpriyo – Photography Competition & Social Media App",
+        duration: "2024 - 2025",
+        techStack: "React Native, Node.js, MongoDB, JWT, Firebase Cloud Messaging",
+        description: "Built mobile platform merging photography competitions and social networking. Developed role-based admin app and JWT-secured REST APIs. Integrated Razorpay wallet top-ups, UPI withdrawals, automated winner evaluation via cron jobs, and FCM push notifications.",
+        link: "",
+        buttonText: "",
+        hasDetails: true,
+        showExternalLink: false,
+        delay: 200
+      },
+    ];
+
+    // Function to load projects dynamically
+    function loadProjects() {
+      const container = document.getElementById('projects-container');
+      if (!container) return;
+
+      projectsData.forEach(project => {
+        // Conditionally create the View Details button
+        const viewDetailsButton = project.hasDetails
+          ? `<a href="./projectDetails.html?project=${project.id}" class="btn-primary-custom">
+               <i class="fas fa-info-circle"></i> View Details
+             </a>`
+          : '';
+
+        // Conditionally create the External Link button
+        const externalLinkButton = project.showExternalLink
+          ? `<a href="${project.link}" target="_blank" class="${project.hasDetails ? 'btn-outline-custom' : 'btn-primary-custom'}" style="${project.hasDetails ? 'border: 2px solid #00abf0; color: #00abf0; padding: 10px 28px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;' : ''}">
+               <i class="fas fa-external-link-alt"></i> ${project.buttonText}
+             </a>`
+          : '';
+
+        const projectCard = `
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="${project.delay}">
+            <div class="custom-card">
+              <h3>${project.title}</h3>
+              <p class="card-subtitle">
+                <strong>Duration:</strong> ${project.duration}
+              </p>
+              <p><strong>Tech Stack:</strong> ${project.techStack}</p>
+              <p>${project.description}</p>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1.5rem;">
+                ${viewDetailsButton}
+                ${externalLinkButton}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>🛠️ My Skills</h2>
-          <p>Technologies and programming languages I work with</p>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-            <h4>Languages & Frameworks</h4>
-            <ul class="skills-list">
-              <li>JavaScript, PHP, Node.js</li>
-              <li>React, React Native, Express.js</li>
-            </ul>
-          </div>
-
-          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-            <h4>Databases & Auth</h4>
-            <ul class="skills-list">
-              <li>MongoDB, MySQL, Firebase Firestore Database</li>
-              <li>JWT, Firebase Auth</li>
-            </ul>
-          </div>
-
-          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-            <h4>Tools & Platforms</h4>
-            <ul class="skills-list">
-              <li>Git, Postman, Vercel, Render</li>
-              <li>VS Code, XAMPP, Expo</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
+        `;
+        container.innerHTML += projectCard;
       });
+    }
 
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
+    // Load projects on page load
+    loadProjects();
+
+    // Education Data
+    const educationData = [
+      {
+        period: "2022 - 2025",
+        degree: "B.Tech in Computer Science and Technology",
+        institution: "Bengal College of Engineering and Technology, Durgapur",
+        description: "Completed Bachelor of Technology in Computer Science and Technology.",
+        delay: 100
+      },
+      {
+        period: "2019 - 2022",
+        degree: "Diploma in Computer Science and Technology",
+        institution: "Dr. B.C. Roy Polytechnic, Durgapur",
+        description: "Completed diploma with strong foundation in programming, database management, and web development technologies.",
+        delay: 200
+      },
+      {
+        period: "2017 - 2019",
+        degree: "Class XII - Science - CBSE",
+        institution: "Amrita Vidyalayam, Durgapur",
+        description: "Completed higher secondary education with Science stream focusing on Physics, Chemistry, and Mathematics.",
+        delay: 300
+      },
+      {
+        period: "2016 - 2017",
+        degree: "Class X - CBSE",
+        institution: "Amrita Vidyalayam, Durgapur",
+        description: "Completed secondary education with strong academic foundation in core subjects.",
+        delay: 400
+      }
+    ];
+
+    // Function to load education dynamically
+    function loadEducation() {
+      const container = document.getElementById('education-container');
+      if (!container) return;
+
+      educationData.forEach(edu => {
+        const educationCard = `
+          <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="${edu.delay}">
+            <div class="custom-card">
+              <div class="card-date" style="color: #00abf0; font-weight: 600; margin-bottom: 0.5rem;">${edu.period}</div>
+              <h3 style="font-size: 1.3rem;">${edu.degree}</h3>
+              <p class="card-subtitle">${edu.institution}</p>
+              <p>${edu.description}</p>
+            </div>
+          </div>
+        `;
+        container.innerHTML += educationCard;
       });
+    }
 
-      // Scroll progress bar
-      window.addEventListener("scroll", () => {
-        const scrollProgress = document.getElementById("scrollProgress");
-        const scrollTop = document.documentElement.scrollTop;
-        const scrollHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrollPercent = (scrollTop / scrollHeight) * 100;
-        scrollProgress.style.width = scrollPercent + "%";
-      }); // Navbar background on scroll
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.style.background = "rgba(8, 27, 41, 0.3)";
-        } else {
-          navbar.style.background = "rgba(8, 27, 41, 0.9)";
+    // Load education on page load
+    loadEducation();
+
+
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+
+    // Scroll progress bar
+    window.addEventListener("scroll", () => {
+      const scrollProgress = document.getElementById("scrollProgress");
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrollPercent = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = scrollPercent + "%";
+    }); // Navbar background on scroll
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.style.background = "rgba(8, 27, 41, 0.3)";
+      } else {
+        navbar.style.background = "rgba(8, 27, 41, 0.9)";
+      }
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".fade-in").forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Progress bar animation when visible
+    const progressObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const progressBars = entry.target.querySelectorAll(
+            ".progress-bar-custom"
+          );
+          progressBars.forEach((bar) => {
+            const width = bar.style.width;
+            bar.style.width = "0%";
+            setTimeout(() => {
+              bar.style.width = width;
+            }, 500);
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".custom-card").forEach((card) => {
+      progressObserver.observe(card);
+    });
+
+    // Parallax effect for background
+    window.addEventListener("scroll", () => {
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      const bgAnimation = document.querySelector(".bg-animation");
+      if (bgAnimation) {
+        bgAnimation.style.transform = `translateY(${rate}px)`;
+      }
+    });
+
+    // Add active class to nav links based on scroll position
+    window.addEventListener("scroll", () => {
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute("id");
         }
       });
 
-      // Fade in animation on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll(".fade-in").forEach((el) => {
-        observer.observe(el);
-      });
-
-      // Progress bar animation when visible
-      const progressObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const progressBars = entry.target.querySelectorAll(
-              ".progress-bar-custom"
-            );
-            progressBars.forEach((bar) => {
-              const width = bar.style.width;
-              bar.style.width = "0%";
-              setTimeout(() => {
-                bar.style.width = width;
-              }, 500);
-            });
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll(".custom-card").forEach((card) => {
-        progressObserver.observe(card);
-      });
-
-      // Parallax effect for background
-      window.addEventListener("scroll", () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        const bgAnimation = document.querySelector(".bg-animation");
-        if (bgAnimation) {
-          bgAnimation.style.transform = `translateY(${rate}px)`;
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
         }
       });
+    });
+  </script>
+</body>
 
-      // Add active class to nav links based on scroll position
-      window.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      });
-    </script>
-  </body>
 </html>
